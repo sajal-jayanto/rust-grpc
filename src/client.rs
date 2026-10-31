@@ -1,10 +1,7 @@
 
+pub mod hello { tonic::include_proto!("hello"); }
 use hello::hello_client::HelloClient;
 use hello::HelloWorldRequest;
-
-pub mod hello { 
-  tonic::include_proto!("hello"); 
-}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
